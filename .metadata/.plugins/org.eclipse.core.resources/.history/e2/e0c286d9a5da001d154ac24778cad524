@@ -1,0 +1,30 @@
+class Node3 {
+	String data;
+	Node3 link;
+	Node3(String data){
+		this.data = data;
+		link = null;
+	}
+}
+
+public class Testlink {
+	public static void main(String[] args) {
+		Node3 list1 = new Node3("희진");
+		list1.link = new Node3("삼식");
+		list1.link.link = new Node3("삼순");
+		
+		for(Node3 p = list1 ; p != null ; p = p.link) {
+			System.out.print(p.data + " ");
+		}
+		System.out.println();
+		Node3 list2 = new Node3("henry");
+		
+		list2.link = list1.link;
+		list1.link = list2.link;
+		list1 = list1.link;
+		
+		for(Node3 p = list1 ; p != null ; p = p.link) {
+			System.out.print(p.data + " ");
+		}
+	}
+}

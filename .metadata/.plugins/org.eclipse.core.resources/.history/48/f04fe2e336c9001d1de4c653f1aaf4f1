@@ -1,0 +1,13 @@
+
+public class ArrayTest_3 {
+	static void reverseArray(int a[]) {
+		
+	}
+	
+	public static void main(String[] args) {
+		int arr[] = {6,3,1,9,7,2};
+		
+		reverseArray(arr);
+	}
+	
+}
